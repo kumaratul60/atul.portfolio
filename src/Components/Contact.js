@@ -2,30 +2,43 @@ import { useState } from "react";
 import { Fade, Slide } from "react-reveal";
 
 const Contact = ({ data }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  if (data) {
-    var contactName = data.name;
-    var street = data.address.street;
-    var city = data.address.city;
-    var state = data.address.state;
-    var zip = data.address.zip;
-    var phone = data.phone;
-    var contactEmail = data.email;
-    var contactMessage = data.contactMessage;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  if (!data) {
+    return null;
   }
 
+  const {
+    name: contactName,
+    address: { street, city, state, zip },
+    phone,
+    email: contactEmail,
+    contactMessage,
+  } = data;
+
+  const { name, email, subject, message } = formData;
+
   const submitForm = () => {
-    window.open(
-      `mailto:${contactEmail}?subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(name)} (${encodeURIComponent(
-        email
-      )}): ${encodeURIComponent(message)}`
-    );
+    const mailtoLink = `mailto:${contactEmail}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(name)} (${encodeURIComponent(
+      email
+    )}): ${encodeURIComponent(message)}`;
+
+    window.open(mailtoLink);
   };
 
   return (
@@ -50,64 +63,62 @@ const Contact = ({ data }) => {
             <form onSubmit={submitForm}>
               <fieldset>
                 <div>
-                  <label htmlFor="contactName">
+                  <label htmlFor="name">
                     Name <span className="required">*</span>
                   </label>
                   <input
                     type="text"
-                    // defaultValue=""
                     value={name}
                     size="35"
-                    id="contactName"
-                    name="contactName"
-                    onChange={(e) => setName(e.target.value)}
+                    id="name"
+                    name="name"
+                    onChange={handleChange}
+                    required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="contactEmail">
+                  <label htmlFor="email">
                     Email <span className="required">*</span>
                   </label>
                   <input
                     type="text"
-                    // defaultValue=""
                     value={email}
                     size="35"
-                    id="contactEmail"
-                    name="contactEmail"
-                    onChange={(e) => setEmail(e.target.value)}
+                    id="email"
+                    name="email"
+                    onChange={handleChange}
+                    required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="contactSubject">Subject</label>
+                  <label htmlFor="subject">Subject</label>
                   <input
                     type="text"
-                    // defaultValue=""
                     value={subject}
                     size="35"
-                    id="contactSubject"
-                    name="contactSubject"
-                    onChange={(e) => setSubject(e.target.value)}
+                    id="subject"
+                    name="subject"
+                    onChange={handleChange}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="contactMessage">
+                  <label htmlFor="message">
                     Message <span className="required">*</span>
                   </label>
                   <textarea
-                    // cols="50"
-                    // rows="15"
                     value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    id="contactMessage"
-                    name="contactMessage"
+                    onChange={handleChange}
+                    id="message"
+                    name="message"
+                    required
                   ></textarea>
                 </div>
 
                 <div>
-                  <button onClick={submitForm} type="submit" className="submit">
+                  <button type="submit" className="submit">
                     Submit
                   </button>
                 </div>

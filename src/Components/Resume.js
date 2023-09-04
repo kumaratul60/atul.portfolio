@@ -1,45 +1,61 @@
-import Slide from "react-reveal";
+import { Slide } from "react-reveal";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Resume = ({ data }) => {
   AOS.init();
-  if (data) {
-    var skillMessage = data.skillMessage;
-    var education = data.education.map(function (education) {
-      return (
-        <div key={education.school}>
-          <h3>{education.school}</h3>
-          <p className="info">
-            {education.degree} <span>&bull;</span>
-            <em className="date">{education.graduated}</em>
-          </p>
-          <p>{education.description}</p>
-        </div>
-      );
-    });
-    var work = data.work.map(function (work) {
-      return (
-        <div key={work.company}>
-          <h3>{work.company}</h3>
-          <p className="info">
-            {work.title}
-            <span>&bull;</span> <em className="date">{work.years}</em>
-          </p>
-          <p>{work.description}</p>
-        </div>
-      );
-    });
-    var skills = data.skills.map(function (skills) {
-      // var className = "bar-expand " + skills.name.toLowerCase();
-      return (
-        <li key={skills.name}>
-          {/* <span style={{ width: skills.level }} className={className}></span> */}
-          <em>{skills.name}</em>
-        </li>
-      );
-    });
+
+  if (!data) {
+    return null;
   }
+
+  const { skillMessage, education, work, skills } = data;
+
+  const renderEducation = () => {
+    if (!education || education.length === 0) {
+      return null;
+    }
+
+    return education.map((educationItem) => (
+      <div key={educationItem.school}>
+        <h3>{educationItem.school}</h3>
+        <p className="info">
+          {educationItem.degree} <span>&bull;</span>
+          <em className="date">{educationItem.graduated}</em>
+        </p>
+        <p>{educationItem.description}</p>
+      </div>
+    ));
+  };
+
+  const renderWork = () => {
+    if (!work || work.length === 0) {
+      return null;
+    }
+
+    return work.map((workItem) => (
+      <div key={workItem.company}>
+        <h3>{workItem.company}</h3>
+        <p className="info">
+          {workItem.title}
+          <span>&bull;</span> <em className="date">{workItem.years}</em>
+        </p>
+        <p>{workItem.description}</p>
+      </div>
+    ));
+  };
+
+  const renderSkills = () => {
+    if (!skills || skills.length === 0) {
+      return null;
+    }
+
+    return skills.map((skillsItem) => (
+      <li key={skillsItem.name}>
+        <em>{skillsItem.name}</em>
+      </li>
+    ));
+  };
 
   return (
     <section id="resume">
@@ -58,7 +74,7 @@ const Resume = ({ data }) => {
             data-aos-duration="900"
           >
             <div className="row item">
-              <div className="twelve columns">{education}</div>
+              <div className="twelve columns">{renderEducation()}</div>
             </div>
           </div>
         </div>
@@ -77,7 +93,7 @@ const Resume = ({ data }) => {
             </h1>
           </div>
 
-          <div className="nine columns main-col">{work}</div>
+          <div className="nine columns main-col">{renderWork()}</div>
         </div>
       </Slide>
 
@@ -93,7 +109,7 @@ const Resume = ({ data }) => {
             <p>{skillMessage}</p>
 
             <div className="bars">
-              <ul className="skills">{skills}</ul>
+              <ul className="skills">{renderSkills()}</ul>
             </div>
           </div>
         </div>

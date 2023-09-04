@@ -3,7 +3,7 @@
     "name": "Atul Kumar Awasthi",
     "occupation": "Software Engineer",
     "image": "rp.jpg",
-    "bio": "Hi there! I'm Atul. I have 1 year of experience as a Front-end developer. Curious to explore the web and work as Full-stack dev. I am a quick learner and hope to achieve my goals through sheer hard work. I'm curious by nature and have a thirst for knowledge and like to learn more and more at any point in time. I also keep upgrading my skill-set, which I leverage to take myself to newer heights.",
+    "bio": "Hello, I'm Atul, a Front-end developer with 2 years of experience, specializing in Front-end development. My passion  to become a Full-stack developer and build scalable web applications that engage users and deliver outstanding experiences. I'm a quick learner with an insatiable curiosity, constantly upgrading my skills to reach new heights. I thrive on challenges and constantly upgrade my skills to stay at the cutting edge of technology.",
     "contactMessage": "Get in touch with me!",
     "email": "atulreso1@gmail.com",
     "address": {
@@ -40,7 +40,7 @@
     ]
   },
   "resume": {
-    "skillMessage": "My tech-stacks are",
+    "skillMessage": "I specialize in",
     "education": [
       {
         "school": "Punjab Technical University - India",
@@ -51,51 +51,55 @@
     ],
     "work": [
       {
-        "company": "Tailnode Techonologies",
+        "company": "Tailnode Technology",
         "title": "Software Engineer ",
         "years": "January 2023 - August 2023",
-        "description": "Developed a cutting-edge survey platform that gleaned insights from both rural and urban areas. Leveraged React JS, Redux, and Material-UI to craft an engaging user interface while seamlessly integrating APIs. Engineered backend APIs using Node JS, with data storage facilitated by a combination of Mongo DB and Scylla DB. Orchestrated production deployments using AWS and Jenkins, ensuring a robust and scalable application."
+        "description": "Engineered a cutting-edge survey platform that gleaned insights from diverse regions. Crafted an engaging user interface using React JS, Redux, and Material-UI. Seamlessly integrated APIs for a holistic user experience. Orchestrated production deployments on AWS using Jenkins for scalability and reliability."
       },
       {
         "company": "Tickled Media",
         "title": "Software Engineer ",
         "years": "April 2022 - October 2022",
-        "description": "Building a parenting website that provides content directly to consumers (D2C) that helps to make Mama's lifestyle more accessible and helps to diagnose their baby's health in the initial phase. Used Razzlejs to build the web and Vitest for unit testing to improve the SEO performance and web efficiency by 25%. Here responsible for creating the web view infrastructure for millions of users to get a seamless experience with the minimum response time at the leading content-providing parenting company."
+        "description": "Revolutionized parenting with a direct-to-consumer(D2C) website, aiding mothers and diagnosing baby health. Utilized RazzleJs for efficient web building, boosting SEO performance by 25%. Architected web view infrastructure for millions, ensuring a seamless, lightning-fast user experience."
       },
       {
         "company": "Apponward Technologies",
         "title": "Software Engineer ",
         "years": "May 2021 - December 2021",
-        "description": "Building on the client's live website, in which adding some features in the live chatBox module, customized responsive UI. Add a feature that improves the SEO performance and user view. Handling server-side rendering (SSR) using express.js. Handle AWS server for deploying code on production and development server."
+        "description": "Enhanced live chatBox functionality, implemented SEO enhancements, and managed server-side rendering using Express.js. Oversaw AWS servers for code deployment."
       }
     ],
     "skills": [
       {
-        "name": "Node JS ENV, ReactJs, NextJS",
+        "name": "React, Redux, Next.js",
         "level": "75%"
       },
       {
-        "name": "JavaScript,",
-        "level": "70%"
-      },
-      {
-        "name": "HTML-CSS",
-        "level": "70%"
-      },
-      {
-        "name": "Redux tool-kit",
+        "name": "JavaScript, HTML, CSS",
         "level": "70%"
       },
       {
         "name": "Material-UI, Tailwind CSS",
+        "level": "70%"
+      },
+      {
+        "name": "Node.js ENV",
+        "level": "70%"
+      },
+      {
+        "name": "MongoDB, ScyllaDB-CDC",
         "level": "85%"
       },
       {
-        "name": "Redis, Firebase, Vitest, Jest ",
+        "name": "Git, BitBucket",
         "level": "85%"
       },
       {
-        "name": "Git, linux, JIRA, Jenkins",
+        "name": "Jenkins, AWS, Vercel",
+        "level": "85%"
+      },
+      {
+        "name": "linux ENV, JIRA, AGILE",
         "level": "85%"
       }
     ]

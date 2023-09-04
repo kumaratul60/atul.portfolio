@@ -1,20 +1,27 @@
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const About = ({ data }) => {
-  AOS.init();
-  if (data) {
-    var name = data.name;
-    var profilePic = "images/" + data.image;
-    var bio = data.bio;
-    var street = data.address.street;
-    var city = data.address.city;
-    var state = data.address.state;
-    var zip = data.address.zip;
-    var phone = data.phone;
-    var email = data.email;
-    var resumeDownload = data.resumeDownload;
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  if (!data) {
+    return null; // Return early if data is not available
   }
+
+  const {
+    name,
+    image,
+    bio,
+    address: { street, city, state, zip },
+    phone,
+    email,
+    resumeDownload,
+  } = data;
+
+  const profilePic = `images/${image}`;
 
   return (
     <section id="about">
@@ -26,12 +33,11 @@ const About = ({ data }) => {
             data-aos-duration="900"
             className="profile-pic"
             src={profilePic}
-            alt="Atul's Profile Pic"
+            alt={`${name}'s Profile Pic`}
           />
         </div>
         <div className="nine columns main-col">
           <h2>About Me</h2>
-
           <p>{bio}</p>
           <div className="row">
             <div className="columns contact-details">

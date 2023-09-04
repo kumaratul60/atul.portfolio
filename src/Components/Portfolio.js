@@ -1,39 +1,42 @@
-import Fade from "react-reveal";
+import { Fade } from "react-reveal";
 
 const Portfolio = ({ data }) => {
-  if (data) {
-    var projects = data.projects.map(function (projects) {
-      var projectImage = "images/portfolio/" + projects.image;
-      return (
-        <div key={projects.title} className="columns portfolio-item">
-          <div
-            className="item-wrap"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-            data-aos-duration="900"
-          >
-            <a
-              href={projects.url}
-              target="_blank"
-              rel="noreferrer"
-              title={projects.title}
-            >
-              <img alt={projects.title} src={projectImage} />
-              <div className="overlay">
-                <div className="portfolio-item-meta">
-                  <h5>{projects.title}</h5>
-                  <p>{projects.category}</p>
-                </div>
-              </div>
-              <div className="link-icon">
-                <i className="fa fa-link"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-      );
-    });
+  if (!data || !data.projects || data.projects.length === 0) {
+    return null;
   }
+
+  const renderProjects = data.projects.map((project) => {
+    const projectImage = `images/portfolio/${project.image}`;
+
+    return (
+      <div key={project.title} className="columns portfolio-item">
+        <div
+          className="item-wrap"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-duration="900"
+        >
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noreferrer"
+            title={project.title}
+          >
+            <img alt={project.title} src={projectImage} />
+            <div className="overlay">
+              <div className="portfolio-item-meta">
+                <h5>{project.title}</h5>
+                <p>{project.category}</p>
+              </div>
+            </div>
+            <div className="link-icon">
+              <i className="fa fa-link"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    );
+  });
 
   return (
     <section id="portfolio">
@@ -46,7 +49,7 @@ const Portfolio = ({ data }) => {
               id="portfolio-wrapper"
               className="bgrid-quarters s-bgrid-thirds cf"
             >
-              {projects}
+              {renderProjects}
             </div>
           </div>
         </div>

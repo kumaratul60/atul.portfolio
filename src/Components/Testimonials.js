@@ -1,16 +1,24 @@
 const Testimonials = ({ data }) => {
-  if (data) {
-    var testimonials = data.testimonials.map(function (testimonials) {
-      return (
-        <li key={testimonials.user}>
-          <blockquote>
-            <p>{testimonials.text}</p>
-            <cite>{testimonials.user}</cite>
-          </blockquote>
-        </li>
-      );
-    });
+  if (!data) {
+    return null;
   }
+
+  const { testimonials } = data;
+
+  const renderTestimonials = () => {
+    if (!testimonials || testimonials.length === 0) {
+      return null;
+    }
+
+    return testimonials.map((testimonial) => (
+      <li key={testimonial.user}>
+        <blockquote>
+          <p>{testimonial.text}</p>
+          <cite>{testimonial.user}</cite>
+        </blockquote>
+      </li>
+    ));
+  };
 
   return (
     <section id="testimonials">
@@ -23,7 +31,7 @@ const Testimonials = ({ data }) => {
           </div>
 
           <div className="ten columns flex-container">
-            <ul className="slides">{testimonials}</ul>
+            <ul className="slides">{renderTestimonials()}</ul>
           </div>
         </div>
       </div>

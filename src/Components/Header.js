@@ -1,23 +1,26 @@
 import TypeWriter from "react-typewriter";
 import ParticlesBg from "particles-bg";
-import Fade from "react-reveal";
+import { Fade } from "react-reveal";
 
 const Header = ({ data }) => {
-  if (data) {
-    var name = data.name;
-    var occupation = data.occupation;
-    var description = data.description;
-    // var city = data.address.city;
-    var networks = data.social.map(function (network) {
-      return (
-        <li key={network.name}>
-          <a href={network.url} target="_blank" rel="noopener noreferrer">
-            <i className={network.className}></i>
-          </a>
-        </li>
-      );
-    });
+  if (!data) {
+    return null;
   }
+
+  const { name, occupation, description, social } = data;
+
+  const renderSocialLinks = () => {
+    if (!social || social.length === 0) {
+      return null;
+    }
+    return social.map((network) => (
+      <li key={network.name}>
+        <a href={network.url} target="_blank" rel="noopener noreferrer">
+          <i className={network.className}></i>
+        </a>
+      </li>
+    ));
+  };
 
   return (
     <header id="home">
@@ -79,7 +82,7 @@ const Header = ({ data }) => {
             </Fade>
             <hr />
             <Fade bottom duration={2000}>
-              <ul className="social">{networks}</ul>
+              <ul className="social">{renderSocialLinks()}</ul>
             </Fade>
           </div>
         </div>

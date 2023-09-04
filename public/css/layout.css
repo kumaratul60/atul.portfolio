@@ -328,9 +328,9 @@ ul#nav li a:hover {
 /*----------------------------------------------*/
 
 .bars {
-  width: 48%;
+  width: 50%;
   /* float: left; */
-  padding: 0px;
+  padding: 2px;
   text-align: center;
 }
 .bars .skills {
@@ -341,18 +341,18 @@ ul#nav li a:hover {
   position: relative;
   margin-bottom: 35px;
   background: #ccc;
-  height: 30px;
+  height: 34px;
   border-radius: 8px;
 }
 .bars li em {
-  font: 15px "opensans-bold", sans-serif;
+  font: 14px "opensans-bold", sans-serif;
   color: #313131;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.6px;
   font-weight: normal;
   position: relative;
   /* margin-top: 10px; */
-  top: 3px;
+  top: 5px;
 }
 .bar-expand {
   position: absolute;

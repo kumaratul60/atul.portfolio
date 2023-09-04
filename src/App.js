@@ -1,4 +1,4 @@
-import { useEffect, useState, lazy } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import "./App.css";
 
 const Header = lazy(() => import("./Components/Header"));
@@ -7,6 +7,8 @@ const About = lazy(() => import("./Components/About"));
 const Resume = lazy(() => import("./Components/Resume"));
 const Contact = lazy(() => import("./Components/Contact"));
 const Portfolio = lazy(() => import("./Components/Portfolio"));
+
+const LoadingFallback = () => <div>Loading...</div>;
 
 const App = () => {
   const [resumeData, setResumeData] = useState({});
@@ -26,12 +28,14 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header data={resumeData.main} />
-      <About data={resumeData.main} />
-      <Resume data={resumeData.resume} />
-      <Portfolio data={resumeData.portfolio} />
-      <Contact data={resumeData.main} />
-      <Footer data={resumeData.main} />
+      <Suspense fallback={<LoadingFallback />}>
+        <Header data={resumeData.main} />
+        <About data={resumeData.main} />
+        <Resume data={resumeData.resume} />
+        <Portfolio data={resumeData.portfolio} />
+        <Contact data={resumeData.main} />
+        <Footer data={resumeData.main} />
+      </Suspense>
     </div>
   );
 };
