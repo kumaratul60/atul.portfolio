@@ -2,4 +2,4 @@
 
 Built a Single Page Application that shows my profile, my projects, and contact links, email sends functionality.
 
-## [Live link](https://atulthecode.netlify.app)
+## [Live link](https://atultheportfolio.netlify.app)
