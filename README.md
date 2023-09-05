@@ -6,4 +6,4 @@
 
 ### Snapshots of project 👇
 
-![Alt Text](web performance.png?raw=true "Title")
+<img target="_blank" src="web performance.png">
