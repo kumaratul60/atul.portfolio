@@ -6,4 +6,4 @@
 
 ### Snapshots of project 👇
 
-<img target="_blank" src="web performance.png">
+<img target="_blank" src="web-performance.png">
