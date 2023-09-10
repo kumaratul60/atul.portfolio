@@ -10,7 +10,7 @@
       "city": "Bahraich",
       "state": "Uttar Pradesh"
     },
-    "resumeDownload": "https://drive.google.com/file/d/19XpFIO1UH0q7q_9BMtN3nDD9F1Uhzqnq/view",
+    "resumeDownload": "https://drive.google.com/file/d/15fwh9M360RdCPWz3w1NzugkRLrttO42A/view",
     "social": [
       {
         "name": "twitter",
@@ -65,13 +65,13 @@
       {
         "company": "Apponward Technologies",
         "title": "Software Engineer ",
-        "years": "May 2021 - December 2021",
+        "years": "May 2021 - Fabuary 2022",
         "description": "Enhanced live chatBox functionality, implemented SEO enhancements, and managed server-side rendering using Express.js. Oversaw AWS servers for code deployment."
       }
     ],
     "skills": [
       {
-        "name": "React, Redux, Next.js",
+        "name": "React, Redux, Next.js,",
         "level": "75%"
       },
       {
@@ -83,7 +83,7 @@
         "level": "70%"
       },
       {
-        "name": "Node.js ENV",
+        "name": "Node.js ENV, TypeScript",
         "level": "70%"
       },
       {
@@ -129,6 +129,18 @@
         "category": "portfolio",
         "image": "new-pp.png",
         "url": "https://atul-myportfolio.netlify.app"
+      },
+      {
+        "title": "ai-summarizer (Raect)",
+        "category": "open ai tool",
+        "image": "open1.png",
+        "url": "https://github.com/kumaratul60/ai-summarizer"
+      },
+      {
+        "title": "cars-showcase web (NextJS,TypeScript)",
+        "category": "catalog cars",
+        "image": "image.png",
+        "url": "https://github.com/kumaratul60/cars-showcase"
       },
       {
         "title": "E-commerce site (React JS, Next Js, Redux, NextAuth, Tailwind css)",
