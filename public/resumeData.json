@@ -65,7 +65,7 @@
       {
         "company": "Apponward Technologies",
         "title": "Software Engineer ",
-        "years": "May 2021 - Fabuary 2022",
+        "years": "May 2021 - February 2022",
         "description": "Enhanced live chatBox functionality, implemented SEO enhancements, and managed server-side rendering using Express.js. Oversaw AWS servers for code deployment."
       }
     ],
@@ -107,6 +107,12 @@
   "portfolio": {
     "projects": [
       {
+        "title": "Youtube-build (React JS, Redux, Tailwind CSS)",
+        "category": "web application",
+        "image": "utube.png",
+        "url": "https://github.com/kumaratul60/youtube-build"
+      },
+      {
         "title": "NetFlix Entertainment app (React JS, Redux, Tailwind CSS)",
         "category": "web application",
         "image": "netflix.png",
@@ -117,12 +123,6 @@
         "category": "web application",
         "image": "podify.png",
         "url": "https://github.com/kumaratul60/podify"
-      },
-      {
-        "title": "Youtube-build (React JS, Redux, Tailwind CSS)",
-        "category": "web application",
-        "image": "utube.png",
-        "url": "https://github.com/kumaratul60/youtube-build"
       },
       {
         "title": "my-web (HTML,CSS)",
