@@ -3,7 +3,7 @@
     "name": "Atul Kumar Awasthi",
     "occupation": "Software Engineer",
     "image": "rp.jpg",
-    "bio": "Hello, I'm Atul, a Front-end developer with 2 years of experience, specializing in Front-end development. My passion  to become a Full-stack developer and build scalable web applications that engage users and deliver outstanding experiences. I'm a quick learner with an insatiable curiosity, constantly upgrading my skills to reach new heights. I thrive on challenges and constantly upgrade my skills to stay at the cutting edge of technology.",
+    "bio": "Hello there!, I’m Atul, a Software Engineer with 2+ years of front-end development experience, now advancing towards becoming a Full-stack developer. I specialize in creating scalable web applications that deliver exceptional user experiences. Driven by curiosity and a passion for technology, I constantly upgrade my skills to stay at the cutting edge. I thrive on challenges and excel in transforming complex requirements into high-quality solutions. Let’s connect and see how my expertise can add value to your next project.",
     "contactMessage": "Get in touch with me!",
     "email": "atulreso1@gmail.com",
     "address": {
@@ -29,7 +29,7 @@
       },
       {
         "name": "blog",
-        "url": "https://atulkawasthi.medium.com/",
+        "url": "https://atulkawasthi.medium.com",
         "className": "fa fa-rss"
       },
       {
@@ -51,6 +51,12 @@
     ],
     "work": [
       {
+        "company": "NX BLOCK TRADES (formally Extramarks)",
+        "title": "Software Engineer ",
+        "years": "October 2023 - Present",
+        "description": "Designed and implemented a comprehensive tool for algorithm developers and trading platforms. Enabled users to create, backtest, and transition strategies from paper trading to live trading, reducing strategy development time by 13x. Developed features to generate detailed summary reports with various chart types (heatmap, bar, line), resulting in a 14x increase in user engagement."
+      },
+      {
         "company": "Tailnode Technology",
         "title": "Software Engineer ",
         "years": "January 2023 - August 2023",
@@ -59,39 +65,33 @@
       {
         "company": "Tickled Media",
         "title": "Software Engineer ",
-        "years": "April 2022 - October 2022",
-        "description": "Revolutionized parenting with a direct-to-consumer(D2C) website, aiding mothers and diagnosing baby health. Utilized RazzleJs for efficient web building, boosting SEO performance by 25%. Architected web view infrastructure for millions, ensuring a seamless, lightning-fast user experience."
-      },
-      {
-        "company": "Apponward Technologies",
-        "title": "Software Engineer ",
-        "years": "May 2021 - February 2022",
-        "description": "Enhanced live chatBox functionality, implemented SEO enhancements, and managed server-side rendering using Express.js. Oversaw AWS servers for code deployment."
+        "years": "April 2021 - October 2022",
+        "description": "Revolutionized parenting with a direct-to-consumer(D2C) website, aiding mothers and diagnosing baby health. Utilized RazzleJs for efficient web building, boosting SEO performance by 22%. Architected web view infrastructure for millions, ensuring a seamless, lightning-fast user experience."
       }
     ],
     "skills": [
       {
-        "name": "React, Redux, Next.js,",
-        "level": "75%"
+        "name": "NodeJS , TypeScript",
+        "level": "70%"
       },
       {
         "name": "JavaScript, HTML, CSS",
         "level": "70%"
       },
       {
-        "name": "Material-UI, Tailwind CSS",
+        "name": "React, Redux, NextJS",
+        "level": "75%"
+      },
+      {
+        "name": "Material-UI, AntD-UI, Tailwind CSS",
         "level": "70%"
       },
       {
-        "name": "Node.js ENV, TypeScript",
-        "level": "70%"
-      },
-      {
-        "name": "MongoDB, ScyllaDB-CDC",
+        "name": "MongoDB, PostgreSQL",
         "level": "85%"
       },
       {
-        "name": "Git, BitBucket",
+        "name": "Git, GitHub, GitLab, BitBucket",
         "level": "85%"
       },
       {
@@ -99,13 +99,19 @@
         "level": "85%"
       },
       {
-        "name": "linux ENV, JIRA, AGILE",
+        "name": "Linux, Ubantu, Jira, Agile",
         "level": "85%"
       }
     ]
   },
   "portfolio": {
     "projects": [
+      {
+        "title": "SocialFeed 2.0 (Next JS, Clerk, MongoDB, Tailwind CSS)",
+        "category": "web application",
+        "image": "social2.0.png",
+        "url": "https://github.com/kumaratul60/linkedIn-2.0"
+      },
       {
         "title": "Youtube-build (React JS, Redux, Tailwind CSS)",
         "category": "web application",
@@ -148,7 +154,6 @@
         "image": "amzn.png",
         "url": "https://github.com/kumaratul60/mezon-ecommerce"
       },
-
       {
         "title": "LinkedIn Clone (React JS, Redux, Firebase-auth,db)",
         "category": "Social-media",
@@ -167,7 +172,6 @@
         "image": "mail.png",
         "url": "https://github.com/kumaratul60/mail-me-clone"
       },
-
       {
         "title": " Slack-on (React JS, Next Js, Styled Components, Firebase-db)",
         "category": "Room-Chat messenger",
